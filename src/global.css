@@ -1,0 +1,106 @@
+/* RESET */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+	--clr-vblack: rgb(30, 30, 30);
+	--clr-lblack: rgb(53, 53, 53);
+	--clr-black: #2c2c2c;
+	--clr-white: #f9f9f9;
+	--clr-gray: #515151;
+	--clr-lgray: #797979;
+	
+	--fs-very-small: 0.55rem;
+	--fs-small: 0.88rem;
+	--fs-normal: 1.1rem;
+	--fs-medium: 1.5rem;
+	--fs-large: 2rem;
+
+	--sidebar-lg-width: 14rem;
+	--sidebar-sm-width: 4.3rem;
+}
+
+/* GENERAL STYLING */
+
+body {
+	background-color: var(--clr-black);
+}
+
+.App {
+	min-height: 100vh;
+	max-width: 100vw;
+
+	position: relative;
+
+	font-size: var(--fs-normal);
+	font-family: 'Roboto', sans-serif;
+}
+
+form, 
+input {
+	color: inherit;
+	font-family: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	/* border-radius: inherit; */
+}
+
+/* UTILITY CLASSES */
+
+.icon {
+	width: 24px;
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.flex-align-vertical-center {
+	display: flex;
+	align-items: center;
+}
+
+.main-content {
+	display: flex;
+	position: relative;
+	height: 100vh;
+}
+
+.video-gallery {
+	padding-top: 8.77rem;
+	padding-left: 15rem;
+	padding-right: 1rem;
+
+	background-color: #1a1a1a;
+	width: 100%;
+	height: 140vh;
+
+	color: var(--clr-white);
+
+	position: absolute;
+}
+
+@media (max-width: 980px) {
+	.video-gallery {
+		padding-left: calc(var(--sidebar-sm-width) + 1rem);
+	}
+}
+
+/* COLLAPSED PADDING FROM SIDEBAR-SM */
+.toggled ~ .chips__container {
+	padding-left: var(--sidebar-sm-width);
+}
+
+.toggled ~ .chips__container > .chips__button--left {
+	left: var(--sidebar-sm-width);
+}
+
+.toggled ~ .video-gallery {
+	padding-left: calc(var(--sidebar-sm-width) + 1rem);
+}

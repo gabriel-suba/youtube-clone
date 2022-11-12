@@ -1,0 +1,129 @@
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+}
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 4rem;
+	gap: 1rem;
+
+	padding-inline: 1rem;
+
+	background-color: var(--clr-black);
+}
+
+.navigation__logo {
+	width: 6rem;
+	height: auto;
+	margin-left: 1.5rem;
+}
+
+.navigation__hamburger-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.33rem;
+
+	padding: 0.3rem;
+
+	transition: background-color 120ms ease-out;
+	border-radius: 50%;
+	cursor: pointer;
+
+}
+
+.navigation__hamburger-menu:active {
+	background-color: rgb(78, 78, 78);
+	outline: 1px solid var(--clr-lgray);
+}
+
+.navigation__middle {
+	flex: 2;
+
+	justify-content: center;
+}
+
+.navigation__input-form {
+	display: flex;
+	width: 100%;
+	max-width: 33.25rem;
+	margin-right: 1rem;
+}
+
+.navigation__input-group {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+
+	width: 100%;
+	padding: 0.55rem;
+	background-color: var(--clr-vblack);
+
+	color: var(--clr-white);
+
+	outline: 1px solid var(--clr-gray);
+	border-top-left-radius: 2rem;
+	border-bottom-left-radius: 2rem;
+}
+
+.navigation__input-group input {
+	width: 100%;
+	margin-left: 0.8rem;
+	background-color: transparent;
+
+	font-size: var(--fs-normal);
+
+	outline: none;
+	border: none;
+}
+
+.navigation__input-group:has(> input:focus) {
+	outline: 1px solid rgb(59, 59, 228);
+}
+
+.navigation__input-group input[type="text"]:focus ~ .active {
+	display: block;
+}
+
+.navigation__input-group img {
+	display: none;
+	width: var(--fs-normal);
+	height: auto;
+}
+
+.navigation__search-btn {
+	padding-inline: 1.2rem;
+	background-color: var(--clr-gray);
+	outline: 1px solid var(--clr-gray);
+	border-left: none;
+	border-top-right-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+}
+
+.navigation__mic-btn {
+	background-color: var(--clr-vblack);
+	padding: 0.5rem;
+
+	border-radius: 50%;
+}
+
+.navigation__right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+}
+
+.navigation__avatar {
+	width: 2rem;
+	height: auto;
+}
+
+.navigation__avatar img {
+	border-radius: 50%;
+	cursor: pointer;
+}
