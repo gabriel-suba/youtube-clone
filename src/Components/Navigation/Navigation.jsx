@@ -3,6 +3,9 @@ import './Navigation.css'
 const Navigation = (props) => {
 	const { setLgCollapsed } = props
 
+	// TODO: SEARCH BAR COMPONENT UNDER 650px,
+	// TODO: REMOVE GAP(??) JUST PADDING...
+
 	return (
 		<header>
 			<nav className="navigation flex-align-vertical-center">
@@ -16,7 +19,7 @@ const Navigation = (props) => {
 					</div>
 				</div>
 
-				<div className="navigation__middle flex-align-vertical-center">
+				<div className="navigation__middle">
 					<div className="navigation__input-form">
 						<div className="navigation__input-group">
 							<input type="text" placeholder="Search" />
@@ -32,8 +35,10 @@ const Navigation = (props) => {
 				</div>
 
 				<div className="navigation__right">
-					<div><img className="icon" src="./assets/video-plus.svg" alt="video icon" /></div>
-					<div><img className="icon" src="./assets/notifications.svg" alt="notification icon" /></div>
+					<div className="icon-md"><img className="icon" src="./assets/search-outline.svg" alt="search icon" /></div>
+					<div className="icon-md"><img className="icon" src="./assets/mic.svg" alt="mic icon" /></div>
+					<div className="right__video"><img className="icon" src="./assets/video-plus.svg" alt="video icon" /></div>
+					<div className="right__notif"><img className="icon" src="./assets/notifications.svg" alt="notification icon" /></div>
 					<div className="navigation__avatar"><img src="./assets/avatar.svg" alt="user icon" /></div>
 				</div>
 

@@ -26,9 +26,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 0.33rem;
-
-	padding: 0.3rem;
 
 	transition: background-color 120ms ease-out;
 	border-radius: 50%;
@@ -44,6 +41,8 @@ header {
 .navigation__middle {
 	flex: 2;
 
+	display: flex;
+	align-items: center;
 	justify-content: center;
 }
 
@@ -91,7 +90,9 @@ header {
 
 .navigation__input-group img {
 	display: none;
-	width: var(--fs-normal);
+	width: 20px;
+	padding: 0;
+	margin-left: 0.3rem;
 	height: auto;
 }
 
@@ -106,14 +107,15 @@ header {
 
 .navigation__mic-btn {
 	background-color: var(--clr-vblack);
-	padding: 0.5rem;
-
 	border-radius: 50%;
+}
+
+.icon-md {
+	display: none;
 }
 
 .navigation__right {
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 	gap: 1rem;
 }
@@ -126,4 +128,39 @@ header {
 .navigation__avatar img {
 	border-radius: 50%;
 	cursor: pointer;
+}
+
+.right__video, .right__notif {
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 650px) {
+	.navigation__middle {
+		display: none;
+	}
+
+	.navigation__right {
+		gap: 0.05rem;
+	}
+
+	.navigation__right > .icon-md {
+		display: flex;
+	}
+
+	.icon-md.navigation__mic-btn {
+		background-color: transparent;
+	}
+}
+
+@media (max-width: 425px) {
+	.right__notif > .navigation__mic-btn {
+		display: none;
+		outline: 1px solid red;
+	}
+
+	.right__notif,
+	.icon-md.navigation__mic-btn {
+		display: none;
+	}
 }

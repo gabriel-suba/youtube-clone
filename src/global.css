@@ -57,7 +57,8 @@ img {
 /* UTILITY CLASSES */
 
 .icon {
-	width: 24px;
+	width: 40px;
+	padding: 0.5rem;
 	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
@@ -72,27 +73,8 @@ img {
 	height: 100vh;
 }
 
-.video-gallery {
-	padding-top: 8.77rem;
-	padding-left: 15rem;
-	padding-right: 1rem;
-
-	background-color: #1a1a1a;
-	width: 100%;
-	height: 140vh;
-
-	color: var(--clr-white);
-
-	position: absolute;
-}
-
-@media (max-width: 980px) {
-	.video-gallery {
-		padding-left: calc(var(--sidebar-sm-width) + 1rem);
-	}
-}
-
 /* COLLAPSED PADDING FROM SIDEBAR-SM */
+
 .toggled ~ .chips__container {
 	padding-left: var(--sidebar-sm-width);
 }

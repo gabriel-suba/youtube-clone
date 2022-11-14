@@ -6,11 +6,17 @@
 	position: fixed;
 	top: 0;
 	z-index: 1;
+
+	font-weight: 600;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1200px) {
 	.chips__container {
 		padding-left: var(--sidebar-sm-width);
+	}
+
+	.chips__container .chips__button--left {
+		left: var(--sidebar-sm-width);
 	}
 }
 
