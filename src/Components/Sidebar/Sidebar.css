@@ -110,14 +110,14 @@
 	align-items: center;
 	gap: 0.33rem;
 
-	padding: 1rem 0.1rem;
+	padding: 1rem 0.3rem;
 }
 
 /* when sidebar-lg is collapsed, show sidebar-sm */
 .toggled .sidebar__container--sm {
 	display: flex;
 	min-height: 100%;
-	width: 4.3rem;
+	width: var(--sidebar-sm-width);
 
 	overflow-y: hidden;
 
@@ -145,7 +145,7 @@
 	.sidebar__container--sm {
 		display: flex;
 		min-height: 100%;
-		width: 4.3rem;
+		width: var(--sidebar-sm-width);
 	
 		overflow-y: hidden;
 	
